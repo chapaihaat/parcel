@@ -1,0 +1,378 @@
+/* Enhanced Print Styles - Updated for 3x3 Sticker and QR Code */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  
+  body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+    color: #000 !important;
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .no-print, .sidebar, .app-header, .menu-toggle, .header-actions, 
+  .btn, .btn-icon, .theme-toggle, .badge, .nav-list, .sidebar-footer,
+  .sidebar-overlay, .quick-actions, .no-print {
+    display: none !important;
+  }
+  
+  .main-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: white !important;
+    width: 100% !important;
+  }
+  
+  .page-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: white !important;
+    max-width: 100% !important;
+  }
+  
+  /* Voucher/Label Styles */
+  .voucher-wrapper {
+    page-break-after: always;
+    page-break-inside: avoid;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .voucher-wrapper:last-child {
+    page-break-after: avoid;
+  }
+  
+  .voucher {
+    max-width: 210mm !important;
+    margin: 0 auto !important;
+    background: white !important;
+    border: 2px solid #1C6B20 !important;
+    border-radius: 4px !important;
+    padding: 16px !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+    box-shadow: none !important;
+    min-height: 180px !important;
+    page-break-inside: avoid;
+  }
+  
+  /* 3x3 Sticker Label Layout */
+  .sticker-3x3 .voucher {
+    width: 3in !important;
+    min-height: 3in !important;
+    max-width: 3in !important;
+    padding: 0.15in !important;
+    border-width: 1.5px !important;
+    font-size: 9px !important;
+    margin: 0 !important;
+    border-radius: 2px !important;
+  }
+  
+  .sticker-3x3 .print-logo {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 2px !important;
+  }
+  
+  .sticker-3x3 .voucher .print-company h2 {
+    font-size: 11px !important;
+    margin: 0 !important;
+  }
+  
+  .sticker-3x3 .voucher .print-company p {
+    font-size: 7px !important;
+    margin: 1px 0 !important;
+  }
+  
+  .sticker-3x3 .voucher .cod-box .amount {
+    font-size: 16px !important;
+  }
+  
+  .sticker-3x3 .voucher .ship-to .name {
+    font-size: 10px !important;
+  }
+  
+  .sticker-3x3 .voucher .ship-to .detail {
+    font-size: 8px !important;
+  }
+  
+  .sticker-3x3 .voucher .barcode-section .barcode {
+    font-size: 8px !important;
+  }
+  
+  .sticker-3x3 .voucher .barcode-section .qr img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .sticker-3x3 .voucher .print-footer {
+    font-size: 6px !important;
+  }
+  
+  /* Logo */
+  .print-logo {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain !important;
+    border-radius: 4px !important;
+    background: white !important;
+    padding: 2px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* QR Code */
+  .voucher .qr-code img {
+    width: 100px !important;
+    height: 100px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Free Shipping Badge */
+  .voucher .free-shipping-badge {
+    background: #d1fae5 !important;
+    color: #065f46 !important;
+    padding: 2px 8px !important;
+    border-radius: 4px !important;
+    font-weight: 700 !important;
+    font-size: 10px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Header */
+  .voucher .print-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    border-bottom: 2px solid #1C6B20 !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .voucher .print-company h2 {
+    font-size: 15px !important;
+    margin: 0 !important;
+    color: #0B2053 !important;
+  }
+  
+  .voucher .print-company p {
+    margin: 1px 0 !important;
+    font-size: 9px !important;
+    color: #555 !important;
+  }
+  
+  /* Ship To */
+  .voucher .ship-to {
+    background: #f8fafc !important;
+    padding: 8px 10px !important;
+    border-radius: 4px !important;
+    border-left: 3px solid #1C6B20 !important;
+    margin-bottom: 8px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .voucher .ship-to .label {
+    font-size: 8px !important;
+    font-weight: 600 !important;
+    color: #1C6B20 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+  }
+  
+  .voucher .ship-to .name {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #0B2053 !important;
+  }
+  
+  .voucher .ship-to .detail {
+    font-size: 10px !important;
+    color: #555 !important;
+    margin-top: 2px !important;
+  }
+  
+  /* COD Box */
+  .voucher .cod-box {
+    background: #f0fdf4 !important;
+    border: 2px solid #1C6B20 !important;
+    border-radius: 4px !important;
+    padding: 8px !important;
+    text-align: center !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .voucher .cod-box .label {
+    font-size: 8px !important;
+    color: #1C6B20 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    font-weight: 600 !important;
+  }
+  
+  .voucher .cod-box .amount {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #1C6B20 !important;
+  }
+  
+  .voucher .cod-box .sub {
+    font-size: 7px !important;
+    color: #666 !important;
+  }
+  
+  /* Details Grid */
+  .voucher .details-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2px 8px !important;
+    padding: 4px 8px !important;
+  }
+  
+  .voucher .details-grid .label {
+    font-size: 8px !important;
+    color: #999 !important;
+  }
+  
+  .voucher .details-grid .value {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    color: #0B2053 !important;
+  }
+  
+  /* Barcode Section */
+  .voucher .barcode-section {
+    background: #f8fafc !important;
+    border-radius: 4px !important;
+    border: 1px solid #e8ecf0 !important;
+    padding: 6px 8px !important;
+    margin-top: 8px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .voucher .barcode-section .barcode {
+    flex: 1 !important;
+    text-align: center !important;
+  }
+  
+  .voucher .barcode-section .qr {
+    border-left: 1px solid #ddd !important;
+    padding-left: 8px !important;
+  }
+  
+  /* Footer */
+  .voucher .print-footer {
+    margin-top: 8px !important;
+    padding-top: 6px !important;
+    border-top: 1px solid #e0e0e0 !important;
+    font-size: 7px !important;
+    color: #999 !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 2px !important;
+  }
+  
+  /* Note */
+  .voucher .note {
+    font-size: 9px !important;
+    color: #666 !important;
+    padding: 4px 8px !important;
+    background: #fafafa !important;
+    border-radius: 4px !important;
+    margin-bottom: 6px !important;
+    border: 1px dashed #ddd !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* A4 Page Settings */
+  @page {
+    margin: 10mm;
+    size: A4;
+  }
+  
+  /* Report Table */
+  .print-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 9px !important;
+    margin: 6px 0 !important;
+  }
+  
+  .print-table th {
+    background: #1C6B20 !important;
+    color: white !important;
+    padding: 3px 6px !important;
+    border: 1px solid #1C6B20 !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .print-table td {
+    padding: 3px 6px !important;
+    border: 1px solid #ddd !important;
+  }
+  
+  .print-table tr:nth-child(even) {
+    background: #f9f9f9 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* Screen styles for voucher preview */
+.voucher {
+  max-width: 210mm;
+  margin: 0 auto;
+  background: white;
+  border: 2px solid #1C6B20;
+  border-radius: 6px;
+  padding: 20px;
+  font-family: 'Inter', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.print-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: white;
+  padding: 2px;
+}
+
+/* Free Shipping badge */
+.free-shipping-badge {
+  display: inline-block;
+  background: #d1fae5;
+  color: #065f46;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* QR Code styling */
+.qr-code img {
+  width: 100px;
+  height: 100px;
+  display: block;
+}

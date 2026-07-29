@@ -1,0 +1,121 @@
+/* Additional responsive tweaks */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 12px;
+  }
+  
+  .card {
+    padding: 16px;
+  }
+  
+  .stat-value {
+    font-size: 20px;
+  }
+  
+  .app-header h1 {
+    font-size: 18px;
+  }
+  
+  .nav-item {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .sidebar-brand .brand-name {
+    font-size: 17px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .form-control {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  table {
+    font-size: 12px;
+  }
+  
+  th, td {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .stat-card {
+    padding: 14px;
+  }
+  
+  .stat-value {
+    font-size: 18px;
+  }
+  
+  .stat-icon {
+    font-size: 28px;
+  }
+  
+  .app-header {
+    padding: 10px 12px;
+    min-height: 60px;
+  }
+  
+  #pageTitle {
+    font-size: 16px;
+  }
+  
+  .badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+  
+  .header-actions {
+    gap: 6px;
+  }
+  
+  .btn-icon {
+    padding: 6px;
+  }
+  
+  .page-container {
+    padding: 8px;
+  }
+  
+  .card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .sidebar {
+    width: 260px;
+  }
+}
+
+/* Print override */
+@media print {
+  .sidebar, .app-header, .menu-toggle, .header-actions, .btn, .no-print {
+    display: none !important;
+  }
+  
+  .main-content {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .page-container {
+    padding: 0 !important;
+  }
+  
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    break-inside: avoid;
+  }
+}

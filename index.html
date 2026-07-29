@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Chapai Haat · Parcel & Order Management</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b2d4b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <script>
+    // Logo SVG data
+    window.CHAPAI_LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="200" height="200">
+      <defs>
+        <linearGradient id="bgCircleGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#3FA638"/>
+          <stop offset="100%" stop-color="#1B6022"/>
+        </linearGradient>
+        <linearGradient id="bagGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#2D9631"/>
+          <stop offset="100%" stop-color="#185C20"/>
+        </linearGradient>
+        <linearGradient id="mangoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFD000"/>
+          <stop offset="100%" stop-color="#FF9100"/>
+        </linearGradient>
+        <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#55B938"/>
+          <stop offset="100%" stop-color="#1C6323"/>
+        </linearGradient>
+      </defs>
+      <path d="M 125,235 A 130,130 0 1,1 325,60" fill="none" stroke="#258229" stroke-width="14" stroke-linecap="round"/>
+      <path d="M 270,55 A 130,130 0 0,1 235,305" fill="none" stroke="#0B2053" stroke-width="14" stroke-linecap="round"/>
+      <g id="emblem">
+        <rect x="175" y="105" width="125" height="135" rx="14" fill="url(#bagGrad)"/>
+        <path d="M 205,115 L 205,85 A 32,32 0 0,1 270,85 L 270,115" fill="none" stroke="#258229" stroke-width="12" stroke-linecap="round"/>
+        <path d="M 205,115 L 205,85 A 32,32 0 0,1 270,85 L 270,115" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+        <text x="238" y="195" font-family="'SolaimanLipi', 'Kalpurush', 'Noto Sans Bengali', sans-serif" font-size="75" font-weight="bold" fill="#FFFFFF" text-anchor="middle">চাঁ</text>
+        <g fill="#2D9631">
+          <circle cx="300" cy="180" r="10"/>
+          <circle cx="285" cy="195" r="10"/>
+          <circle cx="302" cy="198" r="10"/>
+          <circle cx="272" cy="210" r="10"/>
+          <circle cx="289" cy="214" r="10"/>
+        </g>
+        <g>
+          <path d="M 320,180 C 300,180 295,210 325,218 C 350,225 355,190 330,180 Z" fill="url(#mangoGrad)"/>
+          <path d="M 333,180 C 335,170 340,165 342,163" stroke="#258229" stroke-width="3" fill="none"/>
+          <path d="M 342,165 C 355,160 360,172 342,174 Z" fill="#258229"/>
+        </g>
+        <path d="M 220,215 C 290,210 350,200 355,215 C 345,280 250,290 220,225 Z" fill="#0B2053"/>
+        <path d="M 245,232 L 335,232 M 240,248 L 325,248 M 270,225 L 260,265 M 290,222 L 285,270 M 312,220 L 310,260" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 145,185 C 145,260 215,290 215,290 C 215,290 240,220 145,185 Z" fill="url(#leafGrad)"/>
+        <path d="M 145,185 C 180,220 215,290 215,290" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.4"/>
+        <path d="M 220,250 C 220,295 260,295 260,295 C 260,295 270,255 220,250 Z" fill="#35A02B"/>
+      </g>
+      <g id="brand-name">
+        <text x="45" y="370" font-family="'Poppins', 'Montserrat', 'Segoe UI', sans-serif" font-weight="800" font-size="62" fill="#0B2053">Chapai</text>
+        <text x="305" y="370" font-family="'Poppins', 'Montserrat', 'Segoe UI', sans-serif" font-weight="800" font-size="62" fill="#1C6B20">Haat</text>
+      </g>
+      <g id="bengali-text">
+        <line x1="60" y1="410" x2="130" y2="410" stroke="#1C6B20" stroke-width="3"/>
+        <text x="250" y="423" font-family="'SolaimanLipi', 'Kalpurush', 'Noto Sans Bengali', sans-serif" font-weight="bold" font-size="38" fill="#0B2053" text-anchor="middle">চাঁপাই হাট</text>
+        <line x1="370" y1="410" x2="440" y2="410" stroke="#1C6B20" stroke-width="3"/>
+      </g>
+      <g id="tagline" transform="translate(0, 10)">
+        <path d="M 82,442 C 70,432 100,430 102,447 C 95,448 85,450 82,442 Z" fill="#1C6B20"/>
+        <text x="250" y="448" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="19" fill="#1C6B20" text-anchor="middle">Smart Shopping, Trusted Quality</text>
+        <path d="M 418,442 C 430,432 400,430 398,447 C 405,448 415,450 418,442 Z" fill="#1C6B20"/>
+      </g>
+    </svg>`;
+    
+    window.CHAPAI_LOGO_DATA_URL = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(window.CHAPAI_LOGO_SVG);
+  </script>
+</head>
+<body>
+  <nav class="sidebar glass" id="sidebar">
+    <div class="sidebar-brand">
+      <img src="assets/logo.svg" alt="Chapai Haat" class="brand-logo" id="brandLogo" width="48" height="48" 
+           onerror="this.onerror=null; this.src=window.CHAPAI_LOGO_DATA_URL;">
+      <span class="brand-name">চাঁপাই হাট</span>
+    </div>
+    <ul class="nav-list">
+      <li class="nav-item active" data-page="dashboard"><span class="material-icons-round">dashboard</span> Dashboard</li>
+      <li class="nav-item" data-page="orders"><span class="material-icons-round">inventory_2</span> Orders</li>
+      <li class="nav-item" data-page="reports"><span class="material-icons-round">bar_chart</span> Reports</li>
+      <li class="nav-item" data-page="settings"><span class="material-icons-round">settings</span> Settings</li>
+    </ul>
+    <div class="sidebar-footer">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="material-icons-round">dark_mode</span></button>
+      <span class="version">v1.0</span>
+    </div>
+  </nav>
+
+  <main class="main-content" id="mainContent">
+    <header class="app-header glass">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar"><span class="material-icons-round">menu</span></button>
+      <h1 id="pageTitle">Dashboard</h1>
+      <div class="header-actions">
+        <span class="badge online" id="onlineBadge"><span class="material-icons-round">wifi</span> Online</span>
+        <button class="btn-icon" id="printBtn" aria-label="Print"><span class="material-icons-round">print</span></button>
+      </div>
+    </header>
+
+    <section class="page-container" id="pageContainer">
+      <!-- DYNAMIC PAGES LOADED BY JS -->
+      <div class="text-center" style="padding:40px;">
+        <span class="material-icons-round" style="font-size:40px;color:var(--secondary);animation:spin 1s linear infinite;">refresh</span>
+        <p style="margin-top:12px;color:var(--text-secondary);">Loading application...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- QR Code Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  
+  <!-- Load core scripts first -->
+  <script src="js/db.js"></script>
+  <script src="js/parcel.js"></script>
+  <script src="js/print.js"></script>
+  <script src="js/excel.js"></script>
+  <script src="js/barcode.js"></script>
+  <script src="js/qrcode.js"></script>
+  
+  <!-- Load page controllers -->
+  <script src="js/orders.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/dashboard.js"></script>
+  
+  <!-- Load main app -->
+  <script src="js/app.js"></script>
+  
+  <script>
+    // Service Worker registration
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('SW registered', reg))
+        .catch(err => console.warn('SW registration failed', err));
+    }
+    
+    // QR Code verification page handler
+    (function checkQRPage() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const parcelId = urlParams.get('id');
+      if (parcelId && window.location.pathname.includes('parcel.html')) {
+        window.addEventListener('DOMContentLoaded', async () => {
+          try {
+            await db.init();
+            const orders = await db.getAll('orders');
+            const order = orders.find(o => o.parcelId === parcelId);
+            if (order) {
+              document.body.innerHTML = `
+                <div style="max-width:600px;margin:20px auto;padding:20px;font-family:'Inter',sans-serif;">
+                  <div style="background:white;border-radius:16px;padding:24px;box-shadow:0 8px 32px rgba(0,0,0,0.1);">
+                    <h1 style="color:#0b2d4b;margin-bottom:20px;">📦 Parcel Details</h1>
+                    <div style="border-bottom:2px solid #1C6B20;padding-bottom:16px;margin-bottom:16px;">
+                      <div style="font-size:12px;color:#999;">PARCEL ID</div>
+                      <div style="font-size:24px;font-weight:700;color:#1C6B20;">${order.parcelId}</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                      <div><div style="font-size:11px;color:#999;">Customer</div><div style="font-weight:600;">${order.customerName}</div></div>
+                      <div><div style="font-size:11px;color:#999;">Phone</div><div style="font-weight:600;">${order.mobile}</div></div>
+                      <div style="grid-column:span 2;"><div style="font-size:11px;color:#999;">Address</div><div style="font-weight:600;">${order.address}</div></div>
+                      <div><div style="font-size:11px;color:#999;">Product</div><div style="font-weight:600;">${order.productName || '-'}</div></div>
+                      <div><div style="font-size:11px;color:#999;">Quantity</div><div style="font-weight:600;">${order.quantity || 1}</div></div>
+                      <div><div style="font-size:11px;color:#999;">COD Amount</div><div style="font-size:20px;font-weight:700;color:#1C6B20;">৳${order.codAmount.toFixed(2)}</div></div>
+                      <div><div style="font-size:11px;color:#999;">Delivery Charge</div><div style="font-weight:600;">${order.freeShipping ? 'FREE SHIPPING' : '৳' + (order.deliveryCharge || 0).toFixed(2)}</div></div>
+                      <div><div style="font-size:11px;color:#999;">Status</div><div><span style="display:inline-block;padding:2px 12px;border-radius:12px;background:${order.status === 'delivered' ? '#d1fae5' : '#fef3c7'};color:${order.status === 'delivered' ? '#065f46' : '#92400e'};font-weight:600;text-transform:capitalize;">${order.status}</span></div></div>
+                      <div style="grid-column:span 2;"><div style="font-size:11px;color:#999;">Date</div><div style="font-weight:600;">${new Date(order.createdAt).toLocaleString()}</div></div>
+                    </div>
+                    ${order.note ? `<div style="margin-top:12px;padding:12px;background:#f8fafc;border-radius:8px;"><div style="font-size:11px;color:#999;">Note</div><div>${order.note}</div></div>` : ''}
+                    <div style="margin-top:16px;padding-top:16px;border-top:1px solid #eee;text-align:center;font-size:12px;color:#999;">
+                      Chapai Haat · ${new Date().toLocaleDateString()}
+                    </div>
+                  </div>
+                </div>
+              `;
+            } else {
+              document.body.innerHTML = `<div style="text-align:center;padding:40px;font-family:'Inter',sans-serif;"><h2>❌ Parcel not found</h2><p style="color:#666;">Parcel ID: ${parcelId}</p></div>`;
+            }
+          } catch (error) {
+            document.body.innerHTML = `<div style="text-align:center;padding:40px;font-family:'Inter',sans-serif;"><h2>❌ Error loading parcel</h2><p style="color:#666;">${error.message}</p></div>`;
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

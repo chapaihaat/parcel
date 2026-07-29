@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="200" height="200">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgCircleGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3FA638"/>
+      <stop offset="100%" stop-color="#1B6022"/>
+    </linearGradient>
+
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D9631"/>
+      <stop offset="100%" stop-color="#185C20"/>
+    </linearGradient>
+
+    <linearGradient id="mangoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD000"/>
+      <stop offset="100%" stop-color="#FF9100"/>
+    </linearGradient>
+
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#55B938"/>
+      <stop offset="100%" stop-color="#1C6323"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Frames -->
+  <!-- Outer Green Arc -->
+  <path d="M 125,235 A 130,130 0 1,1 325,60" fill="none" stroke="#258229" stroke-width="14" stroke-linecap="round"/>
+  
+  <!-- Outer Dark Blue Arc -->
+  <path d="M 270,55 A 130,130 0 0,1 235,305" fill="none" stroke="#0B2053" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Center Logo Elements Group -->
+  <g id="emblem">
+    <!-- Green Shopping Bag -->
+    <rect x="175" y="105" width="125" height="135" rx="14" fill="url(#bagGrad)"/>
+    <!-- Bag Handles -->
+    <path d="M 205,115 L 205,85 A 32,32 0 0,1 270,85 L 270,115" fill="none" stroke="#258229" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 205,115 L 205,85 A 32,32 0 0,1 270,85 L 270,115" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Bengali Letter 'চাঁ' on Bag -->
+    <text x="238" y="195" font-family="'SolaimanLipi', 'Kalpurush', 'Noto Sans Bengali', sans-serif" font-size="75" font-weight="bold" fill="#FFFFFF" text-anchor="middle">চাঁ</text>
+
+    <!-- Fruits / Produce on Right -->
+    <!-- Grapes -->
+    <g fill="#2D9631">
+      <circle cx="300" cy="180" r="10"/>
+      <circle cx="285" cy="195" r="10"/>
+      <circle cx="302" cy="198" r="10"/>
+      <circle cx="272" cy="210" r="10"/>
+      <circle cx="289" cy="214" r="10"/>
+    </g>
+
+    <!-- Mango -->
+    <g>
+      <path d="M 320,180 C 300,180 295,210 325,218 C 350,225 355,190 330,180 Z" fill="url(#mangoGrad)"/>
+      <path d="M 333,180 C 335,170 340,165 342,163" stroke="#258229" stroke-width="3" fill="none"/>
+      <path d="M 342,165 C 355,160 360,172 342,174 Z" fill="#258229"/>
+    </g>
+
+    <!-- Blue Basket -->
+    <path d="M 220,215 C 290,210 350,200 355,215 C 345,280 250,290 220,225 Z" fill="#0B2053"/>
+    <!-- Basket Grid Pattern Lines -->
+    <path d="M 245,232 L 335,232 M 240,248 L 325,248 M 270,225 L 260,265 M 290,222 L 285,270 M 312,220 L 310,260" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Overlapping Green Leaves (Bottom Left) -->
+    <path d="M 145,185 C 145,260 215,290 215,290 C 215,290 240,220 145,185 Z" fill="url(#leafGrad)"/>
+    <path d="M 145,185 C 180,220 215,290 215,290" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.4"/>
+
+    <path d="M 220,250 C 220,295 260,295 260,295 C 260,295 270,255 220,250 Z" fill="#35A02B"/>
+  </g>
+
+  <!-- Main Text: English Brand Name -->
+  <g id="brand-name">
+    <text x="45" y="370" font-family="'Poppins', 'Montserrat', 'Segoe UI', sans-serif" font-weight="800" font-size="62" fill="#0B2053">Chapai</text>
+    <text x="305" y="370" font-family="'Poppins', 'Montserrat', 'Segoe UI', sans-serif" font-weight="800" font-size="62" fill="#1C6B20">Haat</text>
+  </g>
+
+  <!-- Bengali Sub-heading -->
+  <g id="bengali-text">
+    <line x1="60" y1="410" x2="130" y2="410" stroke="#1C6B20" stroke-width="3"/>
+    <text x="250" y="423" font-family="'SolaimanLipi', 'Kalpurush', 'Noto Sans Bengali', sans-serif" font-weight="bold" font-size="38" fill="#0B2053" text-anchor="middle">চাঁপাই হাট</text>
+    <line x1="370" y1="410" x2="440" y2="410" stroke="#1C6B20" stroke-width="3"/>
+  </g>
+
+  <!-- Tagline / Slogan -->
+  <g id="tagline" transform="translate(0, 10)">
+    <!-- Left Leaf -->
+    <path d="M 82,442 C 70,432 100,430 102,447 C 95,448 85,450 82,442 Z" fill="#1C6B20"/>
+    
+    <!-- Tagline Text -->
+    <text x="250" y="448" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="19" fill="#1C6B20" text-anchor="middle">Smart Shopping, Trusted Quality</text>
+
+    <!-- Right Leaf -->
+    <path d="M 418,442 C 430,432 400,430 398,447 C 405,448 415,450 418,442 Z" fill="#1C6B20"/>
+  </g>
+</svg>

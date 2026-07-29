@@ -1,0 +1,25 @@
+
+### Technical Requirements
+
+- **Browser:** Modern browser with IndexedDB support
+- **Internet:** Required only for initial load and SW registration
+- **Storage:** Works offline after first visit
+
+### Print Settings
+
+**A4 Labels:** Standard paper size, professional layout
+**Thermal Labels:** 4x6 inch format optimized for thermal printers
+
+### Support
+
+**Company:** Chapai Haat - চাঁপাই হাট
+**Address:** Monakasha Bazar Shibganj Chapainawabganj Rajshahi Bangladesh
+**Phone:** 01325940272
+
+### License
+
+Proprietary - For Chapai Haat business use only.
+
+---
+
+**Made with ❤️ for Chapai Haat**
